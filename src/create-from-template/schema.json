@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "my-collection-create-from-template",
+  "title": "Creates files in the given folder",
+  "type": "object",
+  "properties": {
+    "folder": {
+      "type": "string",
+      "description": "The destination folder of the files to create.",
+      "x-prompt":"Enter the destination folder:"
+    }
+  },
+  "required": ["folder"]
+}
