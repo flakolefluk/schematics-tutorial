@@ -4,6 +4,10 @@
     "my-collection": {
       "description": "A blank schematic.",
       "factory": "./my-collection/index#myCollection"
+    },
+    "create-file": {
+      "description": "A blank schematic.",
+      "factory": "./create-file/index#createFile"
     }
   }
 }
