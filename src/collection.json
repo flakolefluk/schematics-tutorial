@@ -8,7 +8,8 @@
     "create-file": {
       "description": "A blank schematic.",
       "factory": "./create-file/index#createFile",
-      "schema": "./create-file/schema.json"
+      "schema": "./create-file/schema.json",
+      "aliases": ["cf"]
     }
   }
 }
