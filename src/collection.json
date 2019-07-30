@@ -7,7 +7,8 @@
     },
     "create-file": {
       "description": "A blank schematic.",
-      "factory": "./create-file/index#createFile"
+      "factory": "./create-file/index#createFile",
+      "schema": "./create-file/schema.json"
     }
   }
 }
