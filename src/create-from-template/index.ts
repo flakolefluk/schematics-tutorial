@@ -6,16 +6,22 @@ import {
   url,
   mergeWith,
   move,
-  apply
+  apply,
+  template
 } from "@angular-devkit/schematics";
 import { CreateFromTemplateOptions } from "./schema";
-import { normalize } from "@angular-devkit/core";
+import { normalize, strings } from "@angular-devkit/core";
 
 export function createFromTemplate(options: CreateFromTemplateOptions): Rule {
   return (tree: Tree, context: SchematicContext) => {
+    const folder = strings.dasherize(options.folder);
     const source: Source = url("./files");
     const transformedSource: Source = apply(source, [
-      move(normalize(options.folder))
+      template({
+        filename: options.folder,
+        ...strings // dasherize, classify, camelize, etc
+      }),
+      move(normalize(folder))
     ]);
 
     return mergeWith(transformedSource)(tree, context);
