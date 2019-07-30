@@ -16,6 +16,12 @@
       "factory": "./create-from-template/index#createFromTemplate",
       "schema": "./create-from-template/schema.json",
       "aliases": ["cft"]
+    },
+    "remove-file": {
+      "description": "Removes a file",
+      "factory": "./remove-file/index#removeFile",
+      "schema": "./remove-file/schema.json",
+      "aliases": ["rm"]
     }
   }
 }
