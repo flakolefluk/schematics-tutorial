@@ -30,6 +30,10 @@
     "update-recorder": {
       "description": "A blank schematic.",
       "factory": "./update-recorder/index#updateRecorder"
+    },
+    "ts-ast": {
+      "description": "A blank schematic.",
+      "factory": "./ts-ast/index#tsAst"
     }
   }
 }
