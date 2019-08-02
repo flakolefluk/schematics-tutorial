@@ -22,6 +22,10 @@
       "factory": "./remove-file/index#removeFile",
       "schema": "./remove-file/schema.json",
       "aliases": ["rm"]
+    },
+    "overwrite-file": {
+      "description": "A blank schematic.",
+      "factory": "./overwrite-file/index#overwriteFile"
     }
   }
 }
