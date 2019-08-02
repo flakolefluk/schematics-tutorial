@@ -26,6 +26,10 @@
     "overwrite-file": {
       "description": "A blank schematic.",
       "factory": "./overwrite-file/index#overwriteFile"
+    },
+    "update-recorder": {
+      "description": "A blank schematic.",
+      "factory": "./update-recorder/index#updateRecorder"
     }
   }
 }
