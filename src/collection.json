@@ -38,6 +38,10 @@
     "component": {
       "description": "A blank schematic.",
       "factory": "./component/index#component"
+    },
+    "extended-schematic": {
+      "description": "A blank schematic.",
+      "factory": "./extended-schematic/index#extendedSchematic"
     }
   }
 }
