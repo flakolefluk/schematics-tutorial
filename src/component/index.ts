@@ -1,10 +1,10 @@
-import { Rule, SchematicContext, Tree, chain } from '@angular-devkit/schematics';
+import { Rule, SchematicContext, Tree, chain, noop } from '@angular-devkit/schematics';
 
 export function component(options: any): Rule {
   return (tree: Tree, context: SchematicContext) => {
     return chain([
       createFiles(options),
-      updateModule(options)
+      options.skipModule ? noop() : updateModule(options)
     ])(tree, context);
   };
 }
