@@ -46,6 +46,10 @@
     "external": {
       "description": "A blank schematic.",
       "factory": "./external/index#external"
+    },
+    "tasks": {
+      "description": "A blank schematic.",
+      "factory": "./tasks/index#tasks"
     }
   }
 }

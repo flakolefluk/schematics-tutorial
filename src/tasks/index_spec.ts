@@ -6,10 +6,10 @@ import * as path from 'path';
 const collectionPath = path.join(__dirname, '../collection.json');
 
 
-describe('external-schematic', () => {
+describe('tasks', () => {
   it('works', () => {
     const runner = new SchematicTestRunner('schematics', collectionPath);
-    const tree = runner.runSchematic('external', {}, Tree.empty());
+    const tree = runner.runSchematic('tasks', {}, Tree.empty());
 
     expect(tree.files).toEqual([]);
   });
