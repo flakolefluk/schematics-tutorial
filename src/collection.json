@@ -42,6 +42,10 @@
     "extended-schematic": {
       "description": "A blank schematic.",
       "factory": "./extended-schematic/index#extendedSchematic"
+    },
+    "external": {
+      "description": "A blank schematic.",
+      "factory": "./external/index#external"
     }
   }
 }
