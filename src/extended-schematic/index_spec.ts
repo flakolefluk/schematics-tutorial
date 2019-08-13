@@ -7,10 +7,25 @@ const collectionPath = path.join(__dirname, '../collection.json');
 
 
 describe('extended-schematic', () => {
-  it('works', () => {
+  it('Should throw if path argument is missing', () => {
     const runner = new SchematicTestRunner('schematics', collectionPath);
-    const tree = runner.runSchematic('extended-schematic', {}, Tree.empty());
+    let errorMessage;
+    try {
+      runner.runSchematic('extended-schematic', {}, Tree.empty());
+    } catch (e) {
+      errorMessage = e.message;
+    }
+    expect(errorMessage).toMatch(/required property 'folder'/);
+  });
 
-    expect(tree.files).toEqual([]);
+  it('Should create a file in the given path', () => {
+    const runner = new SchematicTestRunner('schematics', collectionPath);
+    const tree = runner.runSchematic('extended-schematic', { folder: 'hello/world' }, Tree.empty());
+    expect(tree.files).toEqual([
+      '/hello/world/another-file.md',
+      '/hello/world/template-file.ts',
+      '/hello/world/hello/world.html',
+      '/hello/world/hello/world.ts'
+    ]);
   });
 });

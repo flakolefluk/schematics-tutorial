@@ -25,15 +25,18 @@
     },
     "overwrite-file": {
       "description": "A blank schematic.",
-      "factory": "./overwrite-file/index#overwriteFile"
+      "factory": "./overwrite-file/index#overwriteFile",
+      "schema": "./overwrite-file/schema.json"
     },
     "update-recorder": {
       "description": "A blank schematic.",
-      "factory": "./update-recorder/index#updateRecorder"
+      "factory": "./update-recorder/index#updateRecorder",
+      "schema": "./update-recorder/schema.json"
     },
     "ts-ast": {
       "description": "A blank schematic.",
-      "factory": "./ts-ast/index#tsAst"
+      "factory": "./ts-ast/index#tsAst",
+      "schema": "./ts-ast/schema.json"
     },
     "component": {
       "description": "A blank schematic.",
