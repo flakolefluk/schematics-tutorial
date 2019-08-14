@@ -53,6 +53,10 @@
     "tasks": {
       "description": "A blank schematic.",
       "factory": "./tasks/index#tasks"
+    },
+    "ng-add": {
+      "description": "A blank schematic.",
+      "factory": "./ng-add/index#ngAdd"
     }
   }
 }

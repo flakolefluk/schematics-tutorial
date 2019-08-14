@@ -5,14 +5,14 @@ import * as path from "path";
 const collectionPath = path.join(__dirname, "../collection.json");
 
 describe("external-schematic", () => {
-  it("should throw if @schematics/angular is not found", () => {
+  it("should throw if no workspace", async () => {
     const runner = new SchematicTestRunner("schematics", collectionPath);
     let errorMessage;
     try {
-      runner.runSchematic("external", {}, Tree.empty());
+      await runner.runSchematicAsync("external", { name: 'hello', projectName: 'a project'}, Tree.empty()).toPromise();
     } catch (e) {
       errorMessage = e.message;
     }
-    expect(errorMessage).toMatch(/Could not find module "@schematics\/angular"/);
+    expect(errorMessage).toMatch(/Unable to determine format for workspace path./);
   });
 });

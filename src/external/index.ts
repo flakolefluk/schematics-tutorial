@@ -10,7 +10,8 @@ export function external(options: any): Rule {
   return (tree: Tree, context: SchematicContext) => {
     return chain([
       externalSchematic("@schematics/angular", "component", {
-        project: options.project
+        project: options.project,
+        name: options.name
       }),
       extend()
     ])(tree, context);
